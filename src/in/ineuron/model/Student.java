@@ -4,23 +4,21 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.DynamicInsert;
+
 
 @Entity
-@Table(name = "STDTAB")
+@DynamicInsert(value = true)
 public class Student {
 	
 	//Here Id indicates that it's the primary key and @Column supplies the column name in the DB
 	@Id
-	@Column(name = "stdId")
 	private Integer sid;
 	
-	@Column(name = "stdName", length = 20)
 	private String sname; 
 	
-	@Column(name = "stdAddress", length = 20)
 	private String saddress;
 	
-	@Column(name = "stdAge")
 	private Integer sage;
 	
 	
