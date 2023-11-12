@@ -1,17 +1,30 @@
 package in.ineuron.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.GenericGenerator;
 
 
 @Entity
 @DynamicInsert(value = true)
 public class Student {
 	
-	//Here Id indicates that it's the primary key and @Column supplies the column name in the DB
+//To generate the PK automatically we can make use of one of the below generators::
+	
+//	@Id
+//	@GenericGenerator(name = "gen1", strategy = "increment")
+//	@GeneratedValue(generator = "gen1")
+	
+//	@Id
+//	@GenericGenerator(name = "gen1", strategy = "identity")
+//	@GeneratedValue(generator = "gen1")
+	
+	
+	//Here Id indicates that it's the primary key and the developer has to supply the primary key
 	@Id
 	private Integer sid;
 	
