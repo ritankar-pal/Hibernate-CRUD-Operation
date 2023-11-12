@@ -2,6 +2,7 @@ package in.ineuron.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,6 +23,10 @@ public class Student {
 //	@Id
 //	@GenericGenerator(name = "gen1", strategy = "identity")
 //	@GeneratedValue(generator = "gen1")
+	
+	
+	//JPA Generators:: 
+	//@GeneratedValue(strategy = GenerationType.IDENTITY) ----> best suited for MySQL, for Oracle--->GenerationType.SEQUENCE
 	
 	
 	//Here Id indicates that it's the primary key and the developer has to supply the primary key
